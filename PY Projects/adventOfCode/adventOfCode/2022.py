@@ -1,4 +1,4 @@
-file = open("input.txt")
+file = open("mainFile.txt")
 data = file.read()
 
 
@@ -25,8 +25,8 @@ def part2(data):
             sum += int(food)
         sum_list.append(sum)
 
-    sum_list.sort(reverse=True)
-    return sum_list[0] + sum_list[1] + sum_list[2]
+    sum_list.sort()
+    return sum_list[-1] + sum_list[-2] + sum_list[-3]
 
 
 print(f"part1: {part1(data)}")
