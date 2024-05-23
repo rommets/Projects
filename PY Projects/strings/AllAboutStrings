@@ -1,0 +1,35 @@
+x=input('please write a phrase: ')
+y=x.upper()
+print('1)',y)
+# -------------------
+y=x.lower()
+print('2)',y)
+# -------------------
+y=x.startswith('A'or 'B'or 'C')
+if y==False:
+    print('3) Is your phrase starts with A,B,C? no sir!')
+else:
+    print('3) Is your phrase starts with A,B,C? yes sir!')
+# -------------------
+# 4)))))
+# -------------------
+count=0
+for char_num in x:
+    count+=1
+    char_num=len(x)
+print('5)',char_num)
+# -------------------
+y=x.replace('o','u')
+print('6)',y)
+# -------------------
+y=x.split(' ')
+y.sort()
+print('6.5)',y)
+# -------------------
+count=0
+for i in x:
+    if i=='o':
+        count+=1
+print("7) There are %s 'o's in your phrase" % count)
+# -------------------
+
