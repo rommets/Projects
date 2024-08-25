@@ -40,7 +40,7 @@ for names , scores in report_card.items():
     if N != scores:
         print("-")
 print(end='\n')
-# ++++++++++++++++++
+# +++++++++++++++++
 list2=[]
 flag=True
 print('4)')
