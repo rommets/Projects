@@ -7,3 +7,5 @@ while num != -1 :
     num=float(input("pls enter a num: "))
     avr=float(sum/n)
 print("avr is:",avr)
+X  = 2
+FUNC = 12-13-X

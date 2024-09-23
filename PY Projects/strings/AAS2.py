@@ -1,26 +1,56 @@
-Input=input("1) Please enter your phrase: ")
-list=Input.split()
-print("your phrase has",len(list),"words")
-print(end='\n')
-# +++++++++++++++++
-# import array
-# array2=('d',[])
-# flag=True
-# while flag:
-#     a=input("2) Enter as many numbers as you please (If you,re done, type 0): ")
-#     array2.append(a)
-#     if '0' in array2:
-#         flag=False
-# print(array2)
-# special_nummer= float(input("Enter your cursed nummer: "))
-# flag2=True
-# while flag2:
-#     if special_nummer in array2:
-#         array2.remove(special_nummer)
+directory = "C:/Users/hjas/Projects/personal/romina_projects/PY Projects/strings"
+from array import array
+
+
+def read_file(fileName):
+    file = open(directory + "/" + fileName)
+    lines = file.read().split("\n")
+    return lines
+
+
+def count_words():
+    lines = read_file("input.txt")
+    for line in lines:
+        words = line.split()
+        count = len(words)
+        print("word counts in \"" + line + "\" is " + str(count))
+
+
+def remove_element():
+    input_array = array('i')
+    lines = read_file("numbers.txt")
+    remove_number = int(lines.pop(0))
+    lines.pop(0)
+
+    for line in lines:
+        input_array.append(int(line))
+
+    output_array = array('i')
+
+    for num in input_array:
+        if num != remove_number:
+            output_array.append(num)
+    print(output_array)
+
+
+count_words()
+remove_element()
+
+# for line in lines:
+#     int_array.append(int(line))
+# print(int_array)
+
+# print("2) Enter as many numbers as you please (If you're done, type q):")
+# while True:
+#     current = input()
+#     if current == "q":
+#         break
 #     else:
-#         flag2=False
-# print(array2)
-# +++++++++++++++++
+#         int_array.append(int(current))
+
+# remove_number = int(input("Enter number to remove:"))
+
+
 report_card=dict()
 flag=True
 print('3)')
@@ -53,4 +83,3 @@ list2.remove(-1)
 print("your list: ",list2)
 selected_input=float(input("Enter a input so i can tell you its index: "))
 print("index =", list2.index(selected_input))
-# To be continued...
