@@ -1,4 +1,4 @@
-directory = "C:/Users/hjas/Projects/personal/romina_projects/PY Projects/strings"
+directory = "C:\\Users\\Lenovo-T570\\Projects\\PY Projects\\strings"
 from array import array
 
 
@@ -9,11 +9,11 @@ def read_file(fileName):
 
 
 def count_words():
-    lines = read_file("input.txt")
+    lines = read_file("test.txt")
     for line in lines:
-        words = line.split()
-        count = len(words)
-        print("word counts in \"" + line + "\" is " + str(count))
+        khat = len(line.split())
+        count = len(line)
+        print("1) In \"" + line + "\" we have "+ str(khat) + " and "+ str(count)+" words")
 
 
 def remove_element():
@@ -21,7 +21,7 @@ def remove_element():
     lines = read_file("numbers.txt")
     remove_number = int(lines.pop(0))
     lines.pop(0)
-
+    # why is it removing 12 also
     for line in lines:
         input_array.append(int(line))
 
@@ -30,11 +30,7 @@ def remove_element():
     for num in input_array:
         if num != remove_number:
             output_array.append(num)
-    print(output_array)
-
-
-count_words()
-remove_element()
+    print('2)',output_array,end='\n')
 
 # for line in lines:
 #     int_array.append(int(line))
@@ -50,36 +46,32 @@ remove_element()
 
 # remove_number = int(input("Enter number to remove:"))
 
+# def Report_card():
+#     report_card=dict()
+#     flag=True
+#     lines=read_file("reportcard.txt")
+#     report_card.append(lines)
+#          scores=float(input("Enter student,s score: "))
+#          report_card[names] = scores
+#          if report_card== {}:
+#             print("Please enter at least 1 name")
+#             flag=True
+#     N=float(input("Now enter your chosen score: "))
+#     for names , scores in report_card.items():
+#          if N == scores:
+#              print(names.upper(),"received that score")
+#          if N != scores:
+#              print("-")
+#     print(end='\n')
 
-report_card=dict()
-flag=True
-print('3)')
-while flag:
-    names=input("Enter student,s name\n(type 'done' when you,re done): ")
-    if 'done' in names:
-        break
-    scores=float(input("Enter student,s score: "))
-    report_card[names] = scores
-    if report_card== {}:
-        print("Please enter at least 1 name")
-        flag=True
-N=float(input("Now enter your chosen score: "))
-for names , scores in report_card.items():
-    if N == scores:
-        print(names.upper(),"received that score")
-    if N != scores:
-        print("-")
-print(end='\n')
-# +++++++++++++++++
-list2=[]
-flag=True
-print('4)')
-while flag:
-    list2.append(float(input("Enter your inputs here\n (type '-1' when you,re done): ")))
-    if -1 in list2:
-        flag=False
-print(list2)
-list2.remove(-1)
-print("your list: ",list2)
-selected_input=float(input("Enter a input so i can tell you its index: "))
-print("index =", list2.index(selected_input))
+def Index():
+    flag=True
+    lines=read_file('numbersWOspace.txt')
+    print('4)')
+    for i in lines:
+      print(i,"'s index =",lines.index(i))
+
+count_words()
+remove_element()
+# Report_card()
+Index()
