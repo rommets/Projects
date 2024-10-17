@@ -43,7 +43,7 @@ def Index():
     lines=read_file('random.txt')
     print('4) Here are the indexes: ')
     for i in lines:
-      print(i,"'s index =",lines.index(i))
+      print("  ",i,"'s index =",lines.index(i))
 
 # def reverse():
 #     lines=read_file("random.txt")
