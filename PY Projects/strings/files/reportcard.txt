@@ -1,0 +1,6 @@
+19.5
+
+ali 15
+hosna 19.5
+caroline 17
+jason 20
