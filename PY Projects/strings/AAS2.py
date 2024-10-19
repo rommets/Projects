@@ -78,7 +78,7 @@ def counter():
     for nums in array1:
         if nums==selected_num:
             counter+=1
-    print('6) In your array:',array1,'there,s',counter, 'existance of',selected_num)
+    print('6) In your',array1,': there,s',counter, 'existance of',selected_num)
 
 
 
