@@ -54,4 +54,4 @@ for i in sample:
     if i == 'o':
         count += 1
 print("8) There are %s 'o's in your phrase" % count)
-# in nesamplet class, let's point out to algorithms of this funcs. thanks. farewell.
+# in next class, let's point out to algorithms of this funcs. thanks. farewell.
