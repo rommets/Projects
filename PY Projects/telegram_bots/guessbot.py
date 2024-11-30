@@ -7,7 +7,7 @@ def start(update: Update, context: CallbackContext) -> None:
 
 def help(update: Update, context: CallbackContext) -> None:
     update.message.reply_text("Here's the deal: I'll provide you with a random number between 1 and 1000",'\n',
-"and your job is to guess it. After each guessI'll give you hints to help you get closer and closer to the correct number.")
+"And your job is to guess it. After each guessI'll give you hints to help you get closer and closer to the correct number.")
 
 def begin(update: Update, context: CallbackContext) -> None:
     update.message.reply_text("Guess a number between 1 and 1000: ")
