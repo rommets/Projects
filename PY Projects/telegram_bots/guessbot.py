@@ -1,5 +1,5 @@
 from telegram import Update 
-from telegram.ext import Updater, CommandHandler, CallbackContext, filters, MessageHandler
+from telegram.ext import Updater, CommandHandler, CallbackContext, filters, MessageHandler, ApplicationBuilder
 import random
 
 def start(update: Update, context: CallbackContext) -> None:
@@ -36,15 +36,13 @@ def guessing(update:Update,user_guess):
             flag=False
 
 def main():
-    updater = Updater("7717735224:AAExIHPzCqKYxFIXs1YPrIyAVwaPCUcZK8I")
-    dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CommandHandler("help", help))
-    dispatcher.add_handler(CommandHandler("begin", begin))
-    dispatcher.add_handler(MessageHandler(filters.text & ~filters.command, answer))
+    app = ApplicationBuilder().token("7717735224:AAExIHPzCqKYxFIXs1YPrIyAVwaPCUcZK8I").build()
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("help", help))
+    app.add_handler(CommandHandler("begin", begin))
+    app.add_handler(MessageHandler(filters.Text() , answer))
 
-    updater.start_polling()
-    updater.idle()
+    app.run_polling()
 
-    if __name__=='__main__':
-        main()
+if __name__=='__main__':
+    main()
