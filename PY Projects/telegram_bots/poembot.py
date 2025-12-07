@@ -36,7 +36,7 @@ async def faal(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(update.message.text)
 
-app = (ApplicationBuilder().token("7260719869:AAFgLJ3qHUztknfd4SNM4KtIFTp6CPRvF1w").build())
+app = (ApplicationBuilder().token("your_own_token").build())
 
 app.add_handler(CommandHandler("hello", greeting))
 app.add_handler(CommandHandler("faal", faal))
