@@ -36,7 +36,7 @@ def guessing(update:Update,user_guess):
             flag=False
 
 def main():
-    app = ApplicationBuilder().token("7717735224:AAExIHPzCqKYxFIXs1YPrIyAVwaPCUcZK8I").build()
+    app = ApplicationBuilder().token("your_own_token").build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("help", help))
     app.add_handler(CommandHandler("begin", begin))
