@@ -38,7 +38,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 app = (
-    ApplicationBuilder().token("8169939101:AAGCnWHlAmgjQlw3zi5KyFFbqeUznglMMvc").build()
+    ApplicationBuilder().token("your_own_token").build()
 )
 
 app.add_handler(CommandHandler("hello", greeting))
